@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <setParameter name="IIS Web Application Name" value="Default Web Site/BudgetGuru_deploy" />
+  <setParameter name="ApplicationServices-Web.config Connection String" value="data source=.\SQLEXPRESS;Integrated Security=SSPI;AttachDBFilename=|DataDirectory|aspnetdb.mdf;User Instance=true" />
+  <setParameter name="BudgetGuruConnectionString-Web.config Connection String" value="Data Source=DEV-PC\KENSPLAYGROUND;Initial Catalog=BudgetGuru;Integrated Security=True" />
+</parameters>

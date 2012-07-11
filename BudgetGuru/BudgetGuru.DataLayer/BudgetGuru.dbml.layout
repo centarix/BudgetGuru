@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="DataClasses1">
+  <DataContextMoniker Name="/DataClasses1DataContext" />
+  <nestedChildShapes>
+    <classShape Id="15fc3290-5dc2-4eb3-a48a-310d3e42791a" absoluteBounds="4.875, 0.75, 2, 1.3862939453125">
+      <DataClassMoniker Name="/DataClasses1DataContext/Bill_History" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4e160125-42a6-4b00-931f-8bac3d28e076" absoluteBounds="4.89, 1.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(4.875 : 1.44314697265625); (4.625 : 1.44314697265625); (4.625 : 1.7472231029754); (4.875 : 1.7472231029754)]" manuallyRouted="true" fixedFrom="NotFixed" fixedTo="Caller">
+      <AssociationMoniker Name="/DataClasses1DataContext/Bill_History/Bill_History_Bill_History" />
+      <nodes>
+        <classShapeMoniker Id="15fc3290-5dc2-4eb3-a48a-310d3e42791a" />
+        <classShapeMoniker Id="15fc3290-5dc2-4eb3-a48a-310d3e42791a" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="f5d6ca8c-ade8-4b27-acdb-1332309d9181" absoluteBounds="2, 0.875, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/DataClasses1DataContext/Bill_Item" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e3c61dd9-8bb5-406d-8b9e-46f80b83a20e" absoluteBounds="2.015, 1.335, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="BudgetGuru" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DEV-PC\KENSPLAYGROUND;Initial Catalog=BudgetGuru;Integrated Security=True" SettingsObjectName="BudgetGuru.DataLayer.Properties.Settings" SettingsPropertyName="BudgetGuruConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Bill_History" Member="Bill_Histories">
+    <Type Name="Bill_History">
+      <Column Name="Bill_History_Id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="BillId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="BillDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="Bill_History_Bill_History" Member="Bill_History2" ThisKey="Bill_History_Id" OtherKey="Bill_History_Id" Type="Bill_History" Cardinality="One" />
+      <Association Name="Bill_History_Bill_History" Member="Bill_History1" ThisKey="Bill_History_Id" OtherKey="Bill_History_Id" Type="Bill_History" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Bill_Items" Member="Bill_Items">
+    <Type Name="Bill_Item">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="DueDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Amout" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

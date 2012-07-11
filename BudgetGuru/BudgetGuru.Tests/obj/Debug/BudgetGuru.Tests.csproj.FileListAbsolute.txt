@@ -1,0 +1,10 @@
+C:\Users\KEN\documents\visual studio 2010\Projects\BudgetGuru\BudgetGuru.Tests\bin\Debug\BudgetGuru.Tests.dll.config
+C:\Users\KEN\documents\visual studio 2010\Projects\BudgetGuru\BudgetGuru.Tests\bin\Debug\BudgetGuru.Tests.dll
+C:\Users\KEN\documents\visual studio 2010\Projects\BudgetGuru\BudgetGuru.Tests\bin\Debug\BudgetGuru.Tests.pdb
+C:\Users\KEN\documents\visual studio 2010\Projects\BudgetGuru\BudgetGuru.Tests\bin\Debug\BudgetGuru.dll
+C:\Users\KEN\documents\visual studio 2010\Projects\BudgetGuru\BudgetGuru.Tests\bin\Debug\BudgetGuru.pdb
+C:\Users\KEN\documents\visual studio 2010\Projects\BudgetGuru\BudgetGuru.Tests\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\KEN\documents\visual studio 2010\Projects\BudgetGuru\BudgetGuru.Tests\obj\Debug\BudgetGuru.Tests.dll
+C:\Users\KEN\documents\visual studio 2010\Projects\BudgetGuru\BudgetGuru.Tests\obj\Debug\BudgetGuru.Tests.pdb
+C:\Users\KEN\documents\visual studio 2010\Projects\BudgetGuru\BudgetGuru.Tests\bin\Debug\BudgetGuru.DataLayer.dll
+C:\Users\KEN\documents\visual studio 2010\Projects\BudgetGuru\BudgetGuru.Tests\bin\Debug\BudgetGuru.DataLayer.pdb

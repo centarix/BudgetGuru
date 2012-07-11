@@ -1,0 +1,8 @@
+C:\Users\KEN\documents\visual studio 2010\Projects\BudgetGuru\BudgetGuru.Tests\bin\Release\BudgetGuru.Tests.dll.config
+C:\Users\KEN\documents\visual studio 2010\Projects\BudgetGuru\BudgetGuru.Tests\bin\Release\BudgetGuru.Tests.dll
+C:\Users\KEN\documents\visual studio 2010\Projects\BudgetGuru\BudgetGuru.Tests\bin\Release\BudgetGuru.Tests.pdb
+C:\Users\KEN\documents\visual studio 2010\Projects\BudgetGuru\BudgetGuru.Tests\bin\Release\BudgetGuru.dll
+C:\Users\KEN\documents\visual studio 2010\Projects\BudgetGuru\BudgetGuru.Tests\bin\Release\BudgetGuru.pdb
+C:\Users\KEN\documents\visual studio 2010\Projects\BudgetGuru\BudgetGuru.Tests\obj\Release\ResolveAssemblyReference.cache
+C:\Users\KEN\documents\visual studio 2010\Projects\BudgetGuru\BudgetGuru.Tests\obj\Release\BudgetGuru.Tests.dll
+C:\Users\KEN\documents\visual studio 2010\Projects\BudgetGuru\BudgetGuru.Tests\obj\Release\BudgetGuru.Tests.pdb

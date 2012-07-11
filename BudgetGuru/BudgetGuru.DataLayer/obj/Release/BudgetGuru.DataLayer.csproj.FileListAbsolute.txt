@@ -1,0 +1,6 @@
+C:\Users\KEN\documents\visual studio 2010\Projects\BudgetGuru\BudgetGuru.DataLayer\bin\Release\BudgetGuru.DataLayer.dll.config
+C:\Users\KEN\documents\visual studio 2010\Projects\BudgetGuru\BudgetGuru.DataLayer\bin\Release\BudgetGuru.DataLayer.dll
+C:\Users\KEN\documents\visual studio 2010\Projects\BudgetGuru\BudgetGuru.DataLayer\bin\Release\BudgetGuru.DataLayer.pdb
+C:\Users\KEN\documents\visual studio 2010\Projects\BudgetGuru\BudgetGuru.DataLayer\obj\Release\ResolveAssemblyReference.cache
+C:\Users\KEN\documents\visual studio 2010\Projects\BudgetGuru\BudgetGuru.DataLayer\obj\Release\BudgetGuru.DataLayer.dll
+C:\Users\KEN\documents\visual studio 2010\Projects\BudgetGuru\BudgetGuru.DataLayer\obj\Release\BudgetGuru.DataLayer.pdb
