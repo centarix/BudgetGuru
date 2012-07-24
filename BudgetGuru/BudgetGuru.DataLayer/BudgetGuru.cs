@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Linq;
 using System.Collections.Generic;
+using BudgetGuru;
 namespace BudgetGuru.DataLayer
 {
     partial class Bill_Item
@@ -14,7 +15,7 @@ namespace BudgetGuru.DataLayer
             //item.Description = "This was changed! Yay";
             //item._Title = "No work";
 
-            db.SubmitChanges();
+            db.SubmitChanges(); 
             List<Bill_Item> billList = getAllBills();
 
         }
@@ -23,6 +24,17 @@ namespace BudgetGuru.DataLayer
         {
             DataClasses1DataContext db = new DataClasses1DataContext();
             return db.Bill_Items.ToList();
+        }
+
+        public bool addNewBill()
+        {
+
+            DataClasses1DataContext db = new DataClasses1DataContext();
+            db.SubmitChanges();
+            //db.Bill_Items
+            //BillModel
+
+            return false;
         }
     }
 }

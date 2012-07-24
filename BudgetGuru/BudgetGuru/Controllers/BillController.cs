@@ -36,8 +36,8 @@ namespace BudgetGuru.Controllers
 
         public ActionResult Create()
         {
-        //    BillModel b = new BillModel();
-        //    b.establishConnection();
+            //    BillModel b = new BillModel();
+            //    b.establishConnection();
             return View();
         } 
 
@@ -45,12 +45,24 @@ namespace BudgetGuru.Controllers
         // POST: /Bill/Create
 
         [HttpPost]
-        public ActionResult Create(FormCollection collection)
+        [AcceptVerbs(HttpVerbs.Post)]
+        public ActionResult AddBill(FormCollection collection)
+            //public ActionResult Create(ViewModel formData)
         {
             try
             {
+                BudgetGuru.DataLayer.Bill_Item bill = new Bill_Item();
+                bill.Title = collection[0] ?? string.Empty;
+                bill.Description = collection[1] ?? string.Empty;
+                bill.DueDate = Convert.ToDateTime(collection[2]);
+                bill.Amout = Convert.ToDecimal(collection[3]);
+                if (bill.addNewBill())
+                {
+                    //show success msg or confirmation
+                }
                 // TODO: Add insert logic here
-
+                // TODO: Translate FormCollection to Bill Model DTO
+                // TODO: Save billdto using data layer
                 return RedirectToAction("Index");
             }
             catch
