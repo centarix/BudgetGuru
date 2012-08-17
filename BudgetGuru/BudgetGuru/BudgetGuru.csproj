@@ -82,8 +82,11 @@
   <ItemGroup>
     <Content Include="Content\photo1.JPG" />
     <Content Include="Global.asax" />
+    <Content Include="Views\Bill\AddBill.ascx" />
+    <Content Include="Views\Bill\AddBill.aspx" />
     <Content Include="Views\Bill\BillDetails.ascx" />
-    <Content Include="Views\Bill\Create.ascx" />
+    <Content Include="Views\Bill\Edit.aspx" />
+    <Content Include="Views\Bill\EditBill.aspx" />
     <Content Include="Views\Bill\Index.aspx" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -141,10 +144,9 @@
         <WebProjectProperties>
           <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>7293</DevelopmentServerPort>
+          <DevelopmentServerPort>14105</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>
-          </IISUrl>
+          <IISUrl>http://localhost/BudgetGuru</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

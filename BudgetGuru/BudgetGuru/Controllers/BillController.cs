@@ -39,29 +39,35 @@ namespace BudgetGuru.Controllers
             //    BillModel b = new BillModel();
             //    b.establishConnection();
             return View();
-        } 
+        }
+
+        public ActionResult AddBill()
+        {
+            return View();
+        }
 
         //
         // POST: /Bill/Create
 
         [HttpPost]
-        [AcceptVerbs(HttpVerbs.Post)]
-        public ActionResult AddBill(FormCollection collection)
+        //[AcceptVerbs(HttpVerbs.Post)]
+        public ActionResult AddBill(BillModel model)
             //public ActionResult Create(ViewModel formData)
         {
             try
             {
                 BudgetGuru.DataLayer.Bill_Item bill = new Bill_Item();
-                bill.Title = collection[0] ?? string.Empty;
-                bill.Description = collection[1] ?? string.Empty;
-                bill.DueDate = Convert.ToDateTime(collection[2]);
-                bill.Amout = Convert.ToDecimal(collection[3]);
-                if (bill.addNewBill())
-                {
-                    //show success msg or confirmation
-                }
+                bill.Title = model.billTitle ?? string.Empty;
+                bill.Description = model.billDescription ?? string.Empty;
+                bill.DueDate = Convert.ToDateTime(model.billDue);
+                bill.Amout = Convert.ToDecimal(model.billAmt);
+                bill.addNewBill();
+
+                //if (bill.addNewBill())
+                //{
+                //    //show success msg or confirmation
+                //}
                 // TODO: Add insert logic here
-                // TODO: Translate FormCollection to Bill Model DTO
                 // TODO: Save billdto using data layer
                 return RedirectToAction("Index");
             }
@@ -73,25 +79,43 @@ namespace BudgetGuru.Controllers
         
         //
         // GET: /Bill/Edit/5
- 
-        public ActionResult Edit(int id)
+        [HttpGet]
+        public ActionResult Edit(int id, BillModel model)
         {
-            return View();
+            //BudgetGuru.DataLayer.Bill_Item bill = new Bill_Item();
+            var bill = new Bill_Item().getBillById(id);
+            model.billId = bill.Id;
+            model.billAmt = Convert.ToDecimal(bill.Amout);
+            model.billDescription = bill.Description;
+            model.billTitle = bill.Title;
+            model.billDue = Convert.ToString(bill.DueDate);
+
+            //BUILD THIS
+            return View(model);
         }
 
         //
         // POST: /Bill/Edit/5
 
         [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
+        public ActionResult Edit(BillModel model)
         {
             try
             {
                 // TODO: Add update logic here
-                
+                DataClasses1DataContext db = new DataClasses1DataContext();
+                BudgetGuru.DataLayer.Bill_Item bill = new Bill_Item();
+                Bill_Item item = db.Bill_Items.Single(p => p.Id == model.billId); //Load by primary key. Ideal way to update using Linq-SQL
+                //bill.Id = model.billId;
+                item.Title = model.billTitle ?? string.Empty;
+                item.Description = model.billDescription ?? string.Empty;
+                item.DueDate = Convert.ToDateTime(model.billDue);
+                item.Amout = Convert.ToDecimal(model.billAmt);
+                db.SubmitChanges();
+                //bill.updateBill(model.billId);
                 return RedirectToAction("Index");
             }
-            catch
+            catch (Exception e)
             {
                 return View();
             }

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Linq;
 using System.Collections.Generic;
 using BudgetGuru;
+using System;
 namespace BudgetGuru.DataLayer
 {
     partial class Bill_Item
@@ -26,15 +27,53 @@ namespace BudgetGuru.DataLayer
             return db.Bill_Items.ToList();
         }
 
-        public bool addNewBill()
+        public bool editBill(int id)
         {
-
             DataClasses1DataContext db = new DataClasses1DataContext();
-            db.SubmitChanges();
-            //db.Bill_Items
-            //BillModel
+            //Bill_Item item = db.Bill_Items.Single(p => p.Id == id) ?? return false;
+            //Needs work
 
             return false;
+        }
+
+        public bool addNewBill()
+        {
+            
+            DataClasses1DataContext db = new DataClasses1DataContext();
+            db.Bill_Items.InsertOnSubmit(this);
+            try
+            {
+                db.SubmitChanges();
+            }
+            catch (Exception ex)
+            {
+                Console.Write(ex);
+            }
+            //BillModel
+            //Bill_Item item = new Bill_Item();
+            return false;
+        }
+
+        public bool updateBill(int billId)
+        {
+            //DataClasses1DataContext db = new DataClasses1DataContext();
+            
+            try
+            {
+                //db.SubmitChanges();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Console.Write(ex);
+            }
+            return false;
+        }
+
+        public Bill_Item getBillById(int id)
+        {
+            DataClasses1DataContext db = new DataClasses1DataContext();
+            return db.Bill_Items.Single<Bill_Item>(p => p.Id == id);
         }
     }
 }

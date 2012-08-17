@@ -8,6 +8,7 @@
     <h2>Manage your bills here!</h2>
     <%--<%Html.RenderPartial("BillDetails");%>--%>
 <form runat="server">
+<div>
 <asp:GridView ID="grdBill" runat="server" AutoGenerateColumns="False" 
     DataSourceID="BudgetGuruDataSource">
     <Columns>
@@ -18,12 +19,16 @@
             SortExpression="Description" />
         <asp:BoundField DataField="DueDate" HeaderText="DueDate" 
             SortExpression="DueDate" />
-        <asp:BoundField DataField="Amout" HeaderText="Amout" SortExpression="Amout" />
+        <asp:BoundField DataField="Amout" HeaderText="Amount" SortExpression="Amout" />
+         <asp:HyperLinkField 
+            Text="Edit" DataNavigateUrlFields="Id" 
+            DataNavigateUrlFormatString="~/Bill/Edit?id={0}" />
     </Columns>
 </asp:GridView>
+</div>
 <asp:SqlDataSource ID="BudgetGuruDataSource" runat="server" 
     ConnectionString="<%$ ConnectionStrings:BudgetGuruConnectionString %>" 
     SelectCommand="SELECT * FROM [Bill_Items]"></asp:SqlDataSource>
     </form>
-    <%Html.RenderPartial("Create");%>
+    <div><%:Html.ActionLink("Add new bill", "AddBill")%></div>
 </asp:Content>
