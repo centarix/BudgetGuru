@@ -23,6 +23,12 @@ namespace BudgetGuru.Controllers
             return View();
         }
 
+        public ActionResult Index2()
+        {
+            //BudgetGuru.DataLayer.Bill_Item b = new Bill_Item();
+            return View();
+        }
+
         //
         // GET: /Bill/Details/5
 
@@ -59,7 +65,7 @@ namespace BudgetGuru.Controllers
                 BudgetGuru.DataLayer.Bill_Item bill = new Bill_Item();
                 bill.Title = model.billTitle ?? string.Empty;
                 bill.Description = model.billDescription ?? string.Empty;
-                bill.DueDate = Convert.ToDateTime(model.billDue);
+                bill.DueDate = Convert.ToDateTime(model.datepicker);
                 bill.Amout = Convert.ToDecimal(model.billAmt);
                 bill.addNewBill();
 
@@ -88,7 +94,7 @@ namespace BudgetGuru.Controllers
             model.billAmt = Convert.ToDecimal(bill.Amout);
             model.billDescription = bill.Description;
             model.billTitle = bill.Title;
-            model.billDue = Convert.ToString(bill.DueDate);
+            model.datepicker = Convert.ToString(bill.DueDate);
 
             //BUILD THIS
             return View(model);
@@ -102,14 +108,13 @@ namespace BudgetGuru.Controllers
         {
             try
             {
-                // TODO: Add update logic here
                 DataClasses1DataContext db = new DataClasses1DataContext();
                 BudgetGuru.DataLayer.Bill_Item bill = new Bill_Item();
                 Bill_Item item = db.Bill_Items.Single(p => p.Id == model.billId); //Load by primary key. Ideal way to update using Linq-SQL
                 //bill.Id = model.billId;
                 item.Title = model.billTitle ?? string.Empty;
                 item.Description = model.billDescription ?? string.Empty;
-                item.DueDate = Convert.ToDateTime(model.billDue);
+                item.DueDate = Convert.ToDateTime(model.datepicker);
                 item.Amout = Convert.ToDecimal(model.billAmt);
                 db.SubmitChanges();
                 //bill.updateBill(model.billId);
@@ -126,24 +131,36 @@ namespace BudgetGuru.Controllers
  
         public ActionResult Delete(int id)
         {
-            return View();
+            try
+            {
+                DataClasses1DataContext db = new DataClasses1DataContext();
+                Bill_Item bill = db.Bill_Items.Single(p => p.Id == id);
+                db.Bill_Items.DeleteOnSubmit(bill);
+                db.SubmitChanges();
+                return RedirectToAction("Index");
+            }
+            catch (Exception e)
+            {
+                Console.Write(e.StackTrace);
+                return View("Index"); //TODO: Return Error view
+            }
         }
 
         //
         // POST: /Bill/Delete/5
 
         [HttpPost]
-        public ActionResult Delete(int id, FormCollection collection)
+        public ActionResult Delete(int id, BillModel model)
         {
             try
             {
-                // TODO: Add delete logic here
- 
+                Bill_Item bill = new Bill_Item();
+                //bill.deleteBill(id, d);
                 return RedirectToAction("Index");
             }
             catch
             {
-                return View();
+                return View("Index");
             }
         }
     }

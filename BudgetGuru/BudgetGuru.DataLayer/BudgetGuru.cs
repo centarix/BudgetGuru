@@ -70,6 +70,23 @@ namespace BudgetGuru.DataLayer
             return false;
         }
 
+        public bool deleteBill(int billId , DataClasses1DataContext db)
+        {
+            //DataClasses1DataContext db = new DataClasses1DataContext();
+            var deleteB = getBillById(billId);
+            db.Bill_Items.DeleteOnSubmit(deleteB);
+            
+            try
+            {
+                db.SubmitChanges();
+            }catch (Exception e)
+            {
+                Console.Write(e);
+                return false;
+            }
+            return true;
+        }
+
         public Bill_Item getBillById(int id)
         {
             DataClasses1DataContext db = new DataClasses1DataContext();

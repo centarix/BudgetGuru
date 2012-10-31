@@ -1,5 +1,13 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<BudgetGuru.Models.BillModel>" %>
-
+<asp:Content ID="HeadContent" ContentPlaceHolderID="Head" runat="server">
+    <link href="../../Content/css/managebills.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="../../Scripts/manageBills.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $("#datepicker").datepicker();
+        });
+    </script>
+</asp:Content>
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
 	Edit
 </asp:Content>
@@ -39,11 +47,13 @@
             </div>
             
             <div class="editor-label">
-                <%: Html.LabelFor(model => model.billDue) %>
+                <%: Html.LabelFor(model => model.datepicker) %>
             </div>
             <div class="editor-field">
-                <%: Html.TextBoxFor(model => model.billDue) %>
-                <%: Html.ValidationMessageFor(model => model.billDue) %>
+                <%: Html.TextBoxFor(model => model.datepicker) %>
+                <%--<input type="text" id="datepicker" />--%>
+<%--                <%: Html.ValidationMessageFor(model => model.billDue, new { id = "datepicker" })%>
+                <%=this.IdFor(x => x.LastName)%>--%>
             </div>
             
             <div class="editor-label">

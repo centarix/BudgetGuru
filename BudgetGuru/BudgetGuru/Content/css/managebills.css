@@ -1,0 +1,10 @@
+﻿body {
+}
+
+.addLabel
+{
+    background-image: url('../icons/add.png');
+    background-repeat: no-repeat;
+    background-position: left center;
+    height: 24px;
+}

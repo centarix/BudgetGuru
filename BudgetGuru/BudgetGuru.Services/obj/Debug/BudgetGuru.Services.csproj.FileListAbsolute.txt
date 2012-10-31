@@ -1,0 +1,5 @@
+C:\Users\KEN\documents\visual studio 2010\Projects\BudgetGuru\BudgetGuru.Services\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\KEN\documents\visual studio 2010\Projects\BudgetGuru\BudgetGuru.Services\bin\BudgetGuru.Services.dll
+C:\Users\KEN\documents\visual studio 2010\Projects\BudgetGuru\BudgetGuru.Services\bin\BudgetGuru.Services.pdb
+C:\Users\KEN\documents\visual studio 2010\Projects\BudgetGuru\BudgetGuru.Services\obj\Debug\BudgetGuru.Services.dll
+C:\Users\KEN\documents\visual studio 2010\Projects\BudgetGuru\BudgetGuru.Services\obj\Debug\BudgetGuru.Services.pdb

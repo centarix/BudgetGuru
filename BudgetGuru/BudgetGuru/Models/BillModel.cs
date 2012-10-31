@@ -23,7 +23,8 @@ namespace BudgetGuru.Models
             public string billDescription { get; set; }
             [DisplayName("Bill Due Date")]
             [Column]
-            public string billDue { get; set; }
+            //public string billDue { get; set; }
+            public string datepicker { get; set; }
             [DisplayName("Bill Amount")]
             [Column]
             public decimal billAmt { get; set; }

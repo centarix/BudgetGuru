@@ -4,6 +4,14 @@
 	AddBill
 </asp:Content>
 
+<asp:Content ID="HeadContent" ContentPlaceHolderID="Head" runat="server">
+    <script type="text/javascript">
+        $(function () {
+            $("#datepicker").datepicker();
+        });
+    </script>
+</asp:Content>
+
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
  <% using (Html.BeginForm())
@@ -30,11 +38,11 @@
             </div>
             
             <div class="editor-label">
-                <%: Html.LabelFor(model => model.billDue)%>
+                <%: Html.LabelFor(model => model.datepicker)%>
             </div>
             <div class="editor-field">
-                <%: Html.TextBoxFor(model => model.billDue)%>
-                <%: Html.ValidationMessageFor(model => model.billDue)%>
+                <%: Html.TextBoxFor(model => model.datepicker)%>
+                <%: Html.ValidationMessageFor(model => model.datepicker)%>
             </div>
             
             <div class="editor-label">
